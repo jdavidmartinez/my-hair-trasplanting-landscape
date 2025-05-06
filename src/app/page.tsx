@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     // Contenedor principal de la página. Usamos clases de Tailwind para un layout simple.
