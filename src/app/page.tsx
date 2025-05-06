@@ -1,3 +1,5 @@
+// import Image from "next/image"; // Eliminamos esta línea ya que Image no se está usando actualmente
+
 export default function Home() {
   return (
     // Contenedor principal de la página. Usamos clases de Tailwind para un layout simple.
@@ -11,8 +13,9 @@ export default function Home() {
         Esta sección es la primera que ve el usuario.
         Debe tener un titular impactante, subtítulo,
         una imagen o video relevante y el CTA principal.
+        Usamos un azul aguamarina para el fondo.
       */}
-      <section className="w-full bg-blue-600 text-white py-20 text-center">
+      <section className="w-full bg-teal-600 text-white py-20 text-center"> {/* Usamos teal-600 para un azul aguamarina */}
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Recupera tu Cabello y tu Confianza
@@ -21,10 +24,12 @@ export default function Home() {
             Descubre la Solución Definitiva con la Última Tecnología en Implante Capilar
           </p>
           {/* Placeholder para el botón CTA principal */}
-          <button className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition duration-300">
+          {/* Botón con fondo blanco y texto con el color del fondo de la sección */}
+          <button className="bg-white text-teal-600 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-200 transition duration-300">
             Agenda tu Consulta Gratuita
           </button>
           {/* Placeholder para imagen o video de fondo/principal */}
+          {/* Cuando añadas una imagen, necesitarás descomentar la importación de Image y usar el componente: */}
           {/* <Image src="/placeholder-hero.jpg" alt="Implante Capilar" width={800} height={400} className="mt-10 mx-auto"/> */}
         </div>
       </section>
@@ -34,14 +39,14 @@ export default function Home() {
         Sección de Empatía / Problema
         =============================================
         Conecta emocionalmente con el visitante, mostrando comprensión
-        por la situación de la alopecia.
+        por la situación de la alopecia. Fondo gris claro.
       */}
-      <section className="w-full bg-gray-100 py-16 text-center">
+      <section className="w-full bg-gray-100 py-16 text-center"> {/* Gris muy claro */}
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800"> {/* Texto gris oscuro */}
             Entendemos tu Situación
           </h2>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto"> {/* Texto gris más claro */}
             Sabemos el impacto emocional que la pérdida de cabello puede tener en tu vida y tu autoestima. No estás solo en esto.
           </p>
         </div>
@@ -51,14 +56,14 @@ export default function Home() {
         =============================================
         Sección de Solución / Presentación del Tratamiento
         =============================================
-        Introduce el implante capilar como la solución efectiva.
+        Introduce el implante capilar como la solución efectiva. Fondo blanco.
       */}
-      <section className="w-full bg-white py-16 text-center">
+      <section className="w-full bg-white py-16 text-center"> {/* Fondo blanco */}
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800"> {/* Texto gris oscuro */}
             La Solución: Implante Capilar Avanzado
           </h2>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto"> {/* Texto gris más claro */}
             El implante capilar es un procedimiento seguro y efectivo que te permite recuperar el cabello de forma natural y permanente.
           </p>
         </div>
@@ -68,14 +73,14 @@ export default function Home() {
         =============================================
         Sección "Nuestro Diferencial" / Tecnología y Procedimientos
         =============================================
-        Destaca la tecnología y los procedimientos de vanguardia.
+        Destaca la tecnología y los procedimientos de vanguardia. Fondo azul muy claro.
       */}
-      <section className="w-full bg-blue-50 py-16 text-center">
+      <section className="w-full bg-blue-50 py-16 text-center"> {/* Azul muy claro */}
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800"> {/* Texto gris oscuro */}
             Tecnología de Última Generación
           </h2>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8"> {/* Texto gris más claro */}
             Utilizamos las técnicas más avanzadas y equipos de precisión para garantizar resultados óptimos y naturales.
           </p>
           {/* Aquí podrías añadir detalles específicos de la tecnología/técnicas */}
@@ -90,15 +95,15 @@ export default function Home() {
         =============================================
         Sección de Beneficios
         =============================================
-        Enfócate en los resultados y cómo mejoran la vida del paciente.
+        Enfócate en los resultados y cómo mejoran la vida del paciente. Fondo blanco.
       */}
-      <section className="w-full bg-white py-16 text-center">
+      <section className="w-full bg-white py-16 text-center"> {/* Fondo blanco */}
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800"> {/* Texto gris oscuro */}
             Beneficios para Ti
           </h2>
           {/* Lista o descripción de beneficios */}
-          <ul className="text-lg text-gray-700 list-disc list-inside max-w-2xl mx-auto text-left">
+          <ul className="text-lg text-gray-700 list-disc list-inside max-w-2xl mx-auto text-left"> {/* Texto gris más claro */}
             <li>Resultados naturales y estéticos.</li>
             <li>Procedimiento seguro y mínimamente invasivo.</li>
             <li>Recuperación rápida.</li>
@@ -112,14 +117,14 @@ export default function Home() {
         =============================================
         Sección de Prueba Social (Testimonios / Casos de Éxito)
         =============================================
-        Muestra la experiencia de otros pacientes.
+        Muestra la experiencia de otros pacientes. Fondo gris claro.
       */}
-      <section className="w-full bg-gray-100 py-16 text-center">
+      <section className="w-full bg-gray-100 py-16 text-center"> {/* Gris muy claro */}
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800"> {/* Texto gris oscuro */}
             Historias de Éxito
           </h2>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto"> {/* Texto gris más claro */}
             Lee lo que dicen nuestros pacientes satisfechos y ve sus transformaciones.
           </p>
           {/* Aquí irían los testimonios, quizás en un carrusel o grid */}
@@ -135,14 +140,14 @@ export default function Home() {
         =============================================
         Sección "Nuestro Equipo"
         =============================================
-        Presenta a los profesionales detrás del tratamiento.
+        Presenta a los profesionales detrás del tratamiento. Fondo azul muy claro.
       */}
-      <section className="w-full bg-blue-50 py-16 text-center">
+      <section className="w-full bg-blue-50 py-16 text-center"> {/* Azul muy claro */}
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800"> {/* Texto gris oscuro */}
             Nuestro Equipo de Especialistas
           </h2>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto"> {/* Texto gris más claro */}
             Contamos con médicos y personal altamente calificado y con experiencia en implante capilar.
           </p>
           {/* Aquí irían las fotos y descripciones del equipo */}
@@ -159,21 +164,21 @@ export default function Home() {
         =============================================
         Sección de Preguntas Frecuentes (FAQ)
         =============================================
-        Responde a las dudas más comunes para aclarar el proceso.
+        Responde a las dudas más comunes para aclarar el proceso. Fondo blanco.
       */}
-      <section className="w-full bg-white py-16">
+      <section className="w-full bg-white py-16"> {/* Fondo blanco */}
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800"> {/* Texto gris oscuro */}
             Preguntas Frecuentes
           </h2>
           {/* Lista de preguntas y respuestas */}
-          <div className="max-w-3xl mx-auto text-gray-700">
+          <div className="max-w-3xl mx-auto text-gray-700"> {/* Texto gris más claro */}
             <div className="mb-4">
-              <h3 className="text-xl font-semibold mb-2">¿El procedimiento es doloroso?</h3>
+              <h3 className="text-xl font-semibold mb-2 text-gray-800">¿El procedimiento es doloroso?</h3> {/* Títulos de FAQ en gris oscuro */}
               <p>La mayoría de los pacientes experimentan mínimas molestias...</p>
             </div>
             <div className="mb-4">
-              <h3 className="text-xl font-semibold mb-2">¿Cuánto tiempo dura la recuperación?</h3>
+              <h3 className="text-xl font-semibold mb-2 text-gray-800">¿Cuánto tiempo dura la recuperación?</h3>
               <p>La recuperación inicial suele ser de unos pocos días...</p>
             </div>
             {/* Añadir más preguntas y respuestas */}
@@ -186,9 +191,9 @@ export default function Home() {
         =============================================
         Sección de CTA Final / Contacto
         =============================================
-        Reiteración del Call to Action y formulario de contacto.
+        Reiteración del Call to Action y formulario de contacto. Fondo azul aguamarina.
       */}
-      <section className="w-full bg-blue-600 text-white py-20 text-center">
+      <section className="w-full bg-teal-600 text-white py-20 text-center"> {/* Usamos teal-600 para un azul aguamarina */}
          <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               ¿Listo para Dar el Primer Paso?
@@ -197,6 +202,7 @@ export default function Home() {
               Agenda una consulta gratuita y descubre cómo podemos ayudarte a recuperar tu cabello.
             </p>
             {/* Placeholder para el formulario de contacto o botón CTA final */}
+            {/* Cuando implementes el formulario, puedes estilizarlo con clases de Tailwind */}
             {/* <form className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
                 <input type="text" placeholder="Nombre" className="w-full p-3 mb-4 border rounded"/>
                 <input type="email" placeholder="Correo Electrónico" className="w-full p-3 mb-4 border rounded"/>
@@ -206,7 +212,8 @@ export default function Home() {
                 </button>
             </form> */}
              {/* O un botón si el CTA es llamar o ir a otra página */}
-             <button className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition duration-300">
+             {/* Botón con fondo blanco y texto con el color del fondo de la sección */}
+             <button className="bg-white text-teal-600 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-200 transition duration-300">
                 Agenda tu Consulta Gratuita Ahora
             </button>
          </div>
@@ -217,12 +224,13 @@ export default function Home() {
         =============================================
         Pie de Página (Footer)
         =============================================
-        Información legal, enlaces adicionales, redes sociales.
+        Información legal, enlaces adicionales, redes sociales. Fondo gris oscuro.
       */}
-      <footer className="w-full bg-gray-800 text-white py-8 text-center text-sm">
+      <footer className="w-full bg-gray-800 text-white py-8 text-center text-sm"> {/* Gris oscuro */}
         <div className="container mx-auto px-4">
           <p>&copy; {new Date().getFullYear()} Nombre de tu Clínica/Proyecto. Todos los derechos reservados.</p>
           {/* Enlaces a políticas, redes sociales, etc. */}
+          {/* Puedes estilizar los enlaces con clases de Tailwind para que se vean bien sobre el fondo oscuro */}
           {/* <div className="mt-4">
               <a href="/politica-privacidad" className="text-gray-400 hover:text-white mx-2">Política de Privacidad</a>
               <a href="/terminos-servicio" className="text-gray-400 hover:text-white mx-2">Términos de Servicio</a>
