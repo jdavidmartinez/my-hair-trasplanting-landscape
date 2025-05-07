@@ -1,4 +1,4 @@
-// import Image from "next/image"; // Eliminamos esta línea ya que Image no se está usando actualmente
+import Image from "next/image"; // Re-importamos el componente Image
 
 export default function Home() {
   return (
@@ -91,11 +91,91 @@ export default function Home() {
         </div>
       </section>
 
+       {/*
+        =============================================
+        Sección Antes y Después (Imágenes)
+        =============================================
+        Muestra resultados visuales con fotos comparativas.
+      */}
+      <section className="w-full bg-white py-16"> {/* Fondo blanco */}
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800">
+            Resultados Reales: Antes y Después
+          </h2>
+          {/* Contenedor para las parejas de imágenes. Usamos grid para layout responsivo. */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+            {/* Ejemplo de una pareja de imágenes Antes y Después */}
+            <div className="flex flex-col items-center">
+              <h3 className="text-xl font-semibold mb-4 text-gray-800">Paciente 1</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex flex-col items-center">
+                  {/* Reemplaza "/images/placeholder-antes.jpg" con la ruta real de tu imagen Antes */}
+                  <Image
+                    src="/before-after/Paciente01_antes_01.jpg"
+                    alt="Paciente 1 Antes"
+                    width={300} // Ajusta el ancho según tus imágenes
+                    height={300} // Ajusta la altura según tus imágenes
+                    className="rounded-lg shadow-md object-cover" // Clases para estilo
+                  />
+                  <p className="mt-2 text-gray-700 text-sm">Antes</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  {/* Reemplaza "/images/placeholder-despues.jpg" con la ruta real de tu imagen Después */}
+                   <Image
+                    src="/before-after/Paciente01_despues_01.jpg"
+                    alt="Paciente 1 Después"
+                    width={300} // Ajusta el ancho según tus imágenes
+                    height={300} // Ajusta la altura según tus imágenes
+                    className="rounded-lg shadow-md object-cover" // Clases para estilo
+                  />
+                  <p className="mt-2 text-gray-700 text-sm">Después</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Puedes duplicar el bloque anterior para añadir más parejas de imágenes */}
+             {/* Ejemplo de otra pareja de imágenes Antes y Después */}
+             <div className="flex flex-col items-center">
+              <h3 className="text-xl font-semibold mb-4 text-gray-800">Paciente 2</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex flex-col items-center">
+                  {/* Reemplaza "/images/placeholder-antes-2.jpg" con la ruta real de tu imagen Antes */}
+                  <Image
+                    src="/before-after/Paciente01_antes_02.jpg"
+                    alt="Paciente 2 Antes"
+                    width={300} // Ajusta el ancho según tus imágenes
+                    height={300} // Ajusta la altura según tus imágenes
+                    className="rounded-lg shadow-md object-cover" // Clases para estilo
+                  />
+                  <p className="mt-2 text-gray-700 text-sm">Antes</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  {/* Reemplaza "/images/placeholder-despues-2.jpg" con la ruta real de tu imagen Después */}
+                   <Image
+                    src="/before-after/Paciente01_despues_02.jpg"
+                    alt="Paciente 2 Después"
+                    width={300} // Ajusta el ancho según tus imágenes
+                    height={300} // Ajusta la altura según tus imágenes
+                    className="rounded-lg shadow-md object-cover" // Clases para estilo
+                  />
+                  <p className="mt-2 text-gray-700 text-sm">Después</p>
+                </div>
+              </div>
+            </div>
+            {/* Fin de ejemplo de otra pareja de imágenes */}
+
+          </div>
+        </div>
+      </section>
+
+
       {/*
         =============================================
         Sección de Beneficios
         =============================================
         Enfócate en los resultados y cómo mejoran la vida del paciente. Fondo blanco.
+        (Esta sección se mueve D E S P U E S de la galería de imágenes)
       */}
       <section className="w-full bg-white py-16 text-center"> {/* Fondo blanco */}
         <div className="container mx-auto px-4">
@@ -118,6 +198,7 @@ export default function Home() {
         Sección de Prueba Social (Testimonios / Casos de Éxito)
         =============================================
         Muestra la experiencia de otros pacientes. Fondo gris claro.
+        (Esta sección se mueve D E S P U E S de la galería de imágenes)
       */}
       <section className="w-full bg-gray-100 py-16 text-center"> {/* Gris muy claro */}
         <div className="container mx-auto px-4">
